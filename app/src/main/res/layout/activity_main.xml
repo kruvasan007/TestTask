@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/header_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="ПОКАЗАТЕЛИ\nИГРОКА"
+        android:textColor="@color/design_default_color_secondary"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/gamer_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_stats">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/attack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Атака: "
+            android:textSize="22sp" />
+
+        <SeekBar
+            android:id="@+id/attack_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:min="1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/defence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Защита: "
+            android:textSize="22sp" />
+
+        <SeekBar
+            android:id="@+id/defence_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:min="1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здоровье: "
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/monster_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="ПОКАЗАТЕЛИ\nМОНСТРА"
+        android:textAlignment="textEnd"
+        android:textColor="@color/design_default_color_secondary"
+        android:textSize="22dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/monster_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monster_header">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/attack_monster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Атака: "
+            android:textSize="22sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/defence_monster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Защита: "
+            android:textSize="22sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/health_monster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здоровье: "
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <Button
+        android:text="Симуляция нападения"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:id="@+id/simulation_button"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/attack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:padding="8dp"
+        android:text="АТАКОВАТЬ"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/regeneration_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/regeneration_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/white"
+        android:padding="8dp"
+        android:text="ВОССТАНОВИТЬ ЗДОРОВЬЕ"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
